@@ -30,7 +30,15 @@ module.exports = {
                 tags: ["Tasks"],
                 description: "Get Tasks",
                 operationId: "getTasks",
-                parameters: []
+                parameters: [],
+                responses: {
+                    200: {
+                        description: "Tasks retrieved successfully"
+                    },
+                    500: {
+                        description: "Server error"
+                    }
+                }
             }
         },
         "/id/{_id}": {
@@ -47,6 +55,9 @@ module.exports = {
                     description: "Id of the task"
                 }],
                 responses: {
+                    200: {
+                        description: "Task retrieved successfully"
+                    },
                     500: {
                         description: "Server error"
                     }
